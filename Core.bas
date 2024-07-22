@@ -32,7 +32,7 @@ EndProcedure:
    
 ErrorTrap:
    If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Function
 
 'This procedure handles any errors that occur.
@@ -67,7 +67,7 @@ EndProcedure:
    
 ErrorTrap:
    If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 'This procedure returns information about this program.
@@ -85,5 +85,5 @@ EndProcedure:
    
 ErrorTrap:
    If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Function

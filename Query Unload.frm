@@ -1,20 +1,20 @@
 VERSION 5.00
 Begin VB.Form MDIChildWindow 
    Caption         =   "MDI Child Window."
-   ClientHeight    =   2316
-   ClientLeft      =   108
-   ClientTop       =   456
-   ClientWidth     =   3624
+   ClientHeight    =   2325
+   ClientLeft      =   105
+   ClientTop       =   450
+   ClientWidth     =   3630
    MDIChild        =   -1  'True
-   ScaleHeight     =   193
+   ScaleHeight     =   155
    ScaleMode       =   3  'Pixel
-   ScaleWidth      =   302
+   ScaleWidth      =   242
    Begin VB.CommandButton CloseMeButton 
       Caption         =   "&Close me."
       Default         =   -1  'True
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   9.6
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -47,7 +47,7 @@ EndProcedure:
    
 ErrorTrap:
    If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 
@@ -62,6 +62,6 @@ EndProcedure:
    
 ErrorTrap:
    If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
